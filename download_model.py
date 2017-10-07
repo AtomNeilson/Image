@@ -35,7 +35,7 @@ for images in words:
 		# wget.download(images, 'kaggle_images/male/img' + str(i) + ".jpg")
 		# i = i + 1
 		try:
-			urllib.urlretrieve(images, "kaggle_images/female/female-" + str(i) +".jpg")	
+			urllib.urlretrieve(images, "kaggle_images/female/img-" + str(i) +".jpg")	
 			i = i + 1 
 			downloaded = downloaded + 1
 		except requests.exceptions.RequestException as e:
