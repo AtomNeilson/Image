@@ -37,6 +37,7 @@ for images in words:
 		try:
 			urllib.urlretrieve(images, "kaggle_images/female/female-" + str(i) +".jpg")	
 			i = i + 1 
+			downloaded = downloaded + 1
 		except requests.exceptions.RequestException as e:
 			print e
 			# i = i + 1 
@@ -44,5 +45,6 @@ for images in words:
 
     else:
     	print "cannot download" 
+	cancelled = cancelled + 1 
 print("Total downloaded images",downloaded)
 print("Total cancelled images",cancelled)
